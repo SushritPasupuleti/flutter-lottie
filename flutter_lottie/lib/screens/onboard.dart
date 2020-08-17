@@ -29,7 +29,7 @@ class _OnBoardState extends State<OnBoard> with TickerProviderStateMixin {
       child: ListView(
         children: [
           Lottie.asset(
-            'assets/LottieLogo1.json',
+            'assets/lottie/LottieLogo1.json',
             controller: _controller,
             onLoaded: (composition) {
               // Configure the AnimationController with the duration of the

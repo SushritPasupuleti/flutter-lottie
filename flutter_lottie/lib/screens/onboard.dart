@@ -26,7 +26,21 @@ class _OnBoardState extends State<OnBoard> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: child,
+      child: ListView(
+        children: [
+          Lottie.asset(
+            'assets/LottieLogo1.json',
+            controller: _controller,
+            onLoaded: (composition) {
+              // Configure the AnimationController with the duration of the
+              // Lottie file and start the animation.
+              _controller
+                ..duration = composition.duration
+                ..forward();
+            },
+          ),
+        ],
+      ),
     );
   }
 }
